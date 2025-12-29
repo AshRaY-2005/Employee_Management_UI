@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/EMPLOYEE MANAGEMENT/stylesheet.css">
+    <script src="https://kit.fontawesome.com/b300093b52.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--NAV-->
+    <nav class="nav bar">
+        <div class="nav-center">
+            <div class="nav-logo">
+                <a href="/EMPLOYEE MANAGEMENT/index.html" class="cafe">Café SereNe</a>
+            </div>
+            <div class="nav-links">
+                <input type="text" placeholder="Search" class="nav-li search">
+                <a class="nav-li" href="/EMPLOYEE MANAGEMENT/index.html">HOME</a>
+                <a class="nav-li" href="">SERVICES</a>
+                <a class="nav-li" href="">CONTACT</a>
+                <a class="nav-li" href="">FEEDBACK</a>
+                <a class="nav-li" href="">ABOUT</a>
+            </div>
+            <div class="profile">
+                <i class="fa-solid fa-circle-user fa-2x pic"></i>
+            </div>
+        </div>
+    </nav>
+    <!--END OF NAV-->
+    <div class="big-container">
+     <div class="credentials-container">
+        <div class="credentials-login">
+         <div class="credentials-logo">
+            <i class="fa-solid fa-circle-user fa-5x pic"></i>
+         </div>
+         <div class="credentials-info">
+            <input id="id" type="text" placeholder="EMPLOYEE I'D" class="credentials-login-marg credentials-login-css">
+            <select class="drop-down credentials-login-marg drop-down-css" id="job" onchange="getSelection();">
+                <option disabled hidden selected>JOB</option>
+                <option value="BARISTA">BARISTA</option>
+                <option value="CASHIER">CASHIER</option>
+                <option value="CHEF">CHEF</option>
+                <option value="WAITRESS">WAITRESS</option>
+            </select>
+             <div class="two-clm credentials-login-marg">
+                <div class="pay">
+                    <input type="text" placeholder="PAY" class="pay-css" id="payment">
+                </div>
+                <div class="job-tenure">
+                    <select class="tenure-css" id="tenure" onchange="getSelection();">
+                        <option hidden selected disabled>TENURE</option>
+                        <option>PART-TIME</option>
+                        <option>FULL-TIME</option>
+                    </select>
+                </div>
+             </div>
+             <button type="submit" class="btn" onclick=submit()>SUBMIT</button>
+          </div>
+         </div>
+        <div class="id-generator">
+            <div class="id-title">
+                <input type="text" placeholder="EMPLOYEE NAME" class="employee-name" id="name">
+            </div>
+            <div class="generated-id-box">
+                <p class="generatedid" id="genid"> GENERATE ID</p>
+            </div>
+            <button class="id-btn" onclick="generate()">GENERATE</button>
+         </div>
+         </div>
+      <div class="employee-details">
+        <div class="employee">
+            <div class="list ">24R11A6738</div>
+            <div class="list">ETHAN WINTERS</div>
+            <div class="list">BARISTA</div>
+            <div class="list">₹20,000</div>
+            <div class="list">FULL-TIME</div>
+            <button class="list-btn">REMOVE</button>
+        </div>
+        <div class="employee">
+            <div class="list ">24R13A4328</div>
+            <div class="list">AVA JONES</div>
+            <div class="list">CASHIER</div>
+            <div class="list">₹5,000</div>
+            <div class="list-tenure1 list">FULL-TIME</div>
+            <button class="list-btn">REMOVE</button>
+        </div>
+        <div class="employee">
+            <div class="list ">24R69A6984</div>
+            <div class="list">ABIGAIL COOPER</div>
+            <div class="list">WAITRESS</div>
+            <div class="list">₹7,000</div>
+            <div class="list">FULL-TIME</div>
+            <button class="list-btn">REMOVE</button>
+        </div>
+        <div class="employee">
+            <div class="list ">24R11A5234</div>
+            <div class="list">HIROSHI TANAKA</div>
+            <div class="list">CHEF</div>
+            <div class="list">₹25,000</div>
+            <div class="list">FULL-TIME</div>
+            <button class="list-btn">REMOVE</button>
+        </div>
+        <div class="employee">
+            <div class=" list " id="i5"></div>
+            <div class="list-name5 list" id="n5"></div>
+            <div class="list-job5 list" id="j5"></div>
+            <div class="list-pay5 list" id="p5"></div>
+            <div class="list-tenure5 list" id="t5"></div>
+            <button class="list-btn" onclick="iq5()">REMOVE</button>
+        </div>
+        <div class="employee">
+            <div class="list-id6 list " id="i6"></div>
+            <div class="list-name6 list" id="n6" ></div>
+            <div class="list-job6 list" id="j6"></div>
+            <div class="list-pay6 list" id="p6"></div>
+            <div class="list-tenure6 list" id="t6"></div>
+            <button class="list-btn" onclick="iq6()">REMOVE</button>
+        </div>
+        <div class="employee">
+            <div class="list-id7 list " id="i7"></div>
+            <div class="list-name7 list" id="n7"></div>
+            <div class="list-job7 list" id="j7"></div>
+            <div class="list-pay7 list" id="p7"></div>
+            <div class="list-tenure7 list" id="t7"></div>
+            <button class="list-btn" onclick="iq7()">REMOVE</button>
+        </div>
+        <div class="employee">
+            <div class="list-id8 list " id="i8"></div>
+            <div class="list-name8 list" id="n8"></div>
+            <div class="list-job8 list" id="j8"></div>
+            <div class="list-pay8 list" id="p8"></div>
+            <div class="list-tenure8 list" id="t8"></div>
+            <button class="list-btn" onclick="iq8()">REMOVE</button>
+        </div>
+        <div class="employee">
+            <div class="list-id19 list " id="i9"></div>
+            <div class="list-name9 list" id="n9"></div>
+            <div class="list-job9 list" id="j9"></div>
+            <div class="list-pay9 list" id="p9"></div>
+            <div class="list-tenure9 list" id="t9"></div>
+            <button class="list-btn" onclick="iq9()">REMOVE</button>
+        </div>
+        <div class="employee">
+            <div class="list-id10 list " id="i10"></div>
+            <div class="list-name10 list" id="n10"></div>
+            <div class="list-job10 list" id="j10"></div>
+            <div class="list-pay10 list" id="p10"></div>
+            <div class="list-tenure10 list" id="t10"></div>
+            <button class="list-btn" onclick="iq10()">REMOVE</button>
+        </div>
+        <div class="employee">
+            <div class="list-id11 list " id="i11"></div>
+            <div class="list-name11 list" id="n11"></div>
+            <div class="list-job11 list" id="j11"></div>
+            <div class="list-pay11 list" id="p11"></div>
+            <div class="list-tenure11 list" id="t11"></div>
+            <button class="list-btn" onclick="iq11()">REMOVE</button>
+        </div>
+        <div class="employee">
+            <div class="list-id12 list " id="i12"></div>
+            <div class="list-name12 list" id="n12"></div>
+            <div class="list-job12 list" id="j12"></div>
+            <div class="list-pay12 list" id="p12"></div>
+            <div class="list-tenure12 list" id="t12"></div>
+            <button class="list-btn" onclick="iq12()">REMOVE</button>
+        </div>
+        <div class="employee">
+            <div class="list-id13 list " id="i13"></div>
+            <div class="list-name13 list" id="n13"></div>
+            <div class="list-job13 list" id="j13"></div>
+            <div class="list-pay13 list" id="p13"></div>
+            <div class="list-tenure13 list" id="t13"></div>
+            <button class="list-btn" onclick="iq13()">REMOVE</button>
+        </div>
+      </div>
+    </div>
+    <script src="/EMPLOYEE MANAGEMENT/emp.js"></script>
+</body>
+</html>
