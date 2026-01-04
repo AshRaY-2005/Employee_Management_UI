@@ -50,9 +50,7 @@ No external frameworks or libraries are used.
 
 ## How to Run the Project
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
+ - Clone the repository
  -  Open the project folder
  - Open index.html in any modern web browser
 
